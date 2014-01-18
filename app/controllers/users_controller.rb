@@ -9,6 +9,7 @@ class UsersController < ApplicationController
   end
 
 def create
+ params.permit! 
 @user = User.new(params[:user]) # Not the final implementation!
 if @user.save
 # Handle a successful save.
